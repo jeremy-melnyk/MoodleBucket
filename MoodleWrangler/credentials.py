@@ -1,0 +1,4 @@
+credentials = {
+    'netname': '',
+    'password': ''
+}

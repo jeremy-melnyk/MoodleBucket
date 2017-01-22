@@ -87,3 +87,11 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# OS specific files
+.idea/
+.DS_Store
+static/
+downloads/
+ghostdriver.log
+secret.py

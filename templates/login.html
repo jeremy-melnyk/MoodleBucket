@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="login-page">
+    <h1 id="login-title" class="container">Moodle Wrangler</h1>
+        <div class="form">
+            <form class="register-form">
+                <input type="text" placeholder="name"/>
+                <input type="password" placeholder="password"/>
+                <input type="text" placeholder="email address"/>
+                <button>create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form" action="{% url 'home' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="netname" placeholder="netname"/>
+                <input type="password" name="password" placeholder="password"/>
+                <button>login</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/login.js' %}"></script>
+{% endblock %}
+
